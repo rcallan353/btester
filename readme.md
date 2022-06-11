@@ -1,8 +1,8 @@
-# btester - mini backtesting/trading Engine
+# btester - mini backtesting/trading engine
 
 ```bash
 Usage:
-  Aku v0.0.1 [OPTION...]
+  btester v0.0.1 [OPTION...]
 
   -i, --input arg   Input csv file, will read ticks from here
   -o, --output arg  Output csv file, will output trade / results here
