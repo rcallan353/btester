@@ -8,6 +8,7 @@
 #include "YahooFinanceFileTickManager.hpp"
 #include "RandomBuySellStrategy.hpp"
 #include "SmaStrategy.hpp"
+#include "VwmaStrategy.hpp"
 #include "VirtualBank.hpp"
 #include "PaperTradeManager.hpp"
 
@@ -57,8 +58,9 @@ int main(int argc, char **argv) {
     std::unique_ptr<TickManager> tick_manager(new YahooFinanceFileTickManager(input_file));
 
     // initialize strategy
-    std::unique_ptr<Strategy> strategy(new RandomBuySellStrategy());
+    // std::unique_ptr<Strategy> strategy(new RandomBuySellStrategy());
     // std::unique_ptr<Strategy> strategy(new SmaStrategy());
+    std::unique_ptr<Strategy> strategy(new VwmaStrategy());
 
     // initialize a virtual bank
     long double starting_balance = 100000;
